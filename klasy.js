@@ -101,7 +101,7 @@ class Przeciwnik {
     draw_text() {
         var pctx = document.getElementById(this.tag).getContext('2d');
         pctx.font = "18px Arial";
-        pctx.fillStyle = "red";
+        pctx.fillStyle = "white";
         pctx.fillText('HP:' + this.hp, 5, 20);
         pctx.fillText('ATK:' + this.atk, 5, 40);
         pctx.fillText('DEF:' + this.def, 5, 60);
