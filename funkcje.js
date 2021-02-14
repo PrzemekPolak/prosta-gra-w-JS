@@ -56,25 +56,17 @@ function show_canvas(canv) {
 
 // ukrywa wszystkie canvasy w podanej tabeli
 function hide_arr_of_canvas(arr) {
-    for (i=0; i<arr.length; i++) {
-        arr[i].vis = "hidden"
-        arr[i].update_style()
-    }
+    arr.map(arr => {return arr.vis='hidden', arr.update_style()})
 }
 
 // pokazuje wszystkie canvasy w podanej tabeli
 function show_arr_of_canvas(arr) {
-    for (i=0; i<arr.length; i++) {
-        arr[i].vis = "visible"
-        arr[i].update_style()
-    }
+    arr.map(arr => {return arr.vis='visible', arr.update_style()})
 }
 
 // usuwa wszystkie canvasy z podanej tabeli
 function delete_arr_of_canvas(arr) {
-    for (i=0; i<arr.length; i++) {
-        document.getElementById(arr[i].tag).remove()
-    }
+    arr.map(arr => {return document.getElementById(arr.tag).remove()})
 }
 
 // tworzy canvas oraz obiekt klasy Gracz
